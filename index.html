@@ -2024,7 +2024,7 @@ function removeSymptom(button) {
 
     // selectedSymptomを文字列に整形（改行付き）
     const selectedSymptomText = formData.selectedSymptom
-        ? formData.selectedSymptom.map(item => `・${item.name}`).join('\n・')
+        ? formData.selectedSymptom.map(item => `・${item.name}`).join('\n')
         : 'メニュー未選択';
             
             // LINEトークにメッセージを送信
