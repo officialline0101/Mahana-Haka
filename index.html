@@ -2022,11 +2022,11 @@ function removeSymptom(button) {
                 return;
             }
 
-            // selectedSymptomを文字列に整形
-            const selectedSymptomText = formData.selectedSymptom
-                ? formData.selectedSymptom.map(item => `${item.name}`).join(',')
-                : 'メニュー未選択';
-
+    // selectedSymptomを文字列に整形（改行付き）
+    const selectedSymptomText = formData.selectedSymptom
+        ? formData.selectedSymptom.map(item => `・${item.name}`).join('\n・')
+        : 'メニュー未選択';
+            
             // LINEトークにメッセージを送信
             liff.sendMessages([{
                 type: 'text',
